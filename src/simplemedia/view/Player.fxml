@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="anchorpane" fx:id="pane" prefHeight="223.0" prefWidth="425.0" stylesheets="@PlayerTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="simplemedia.view.PlayerController">
+   <children>
+      <Button id="rewindBtn" fx:id="rewindBtn" layoutX="198.0" layoutY="177.0" mnemonicParsing="false" stylesheets="@PlayerTheme.css" AnchorPane.bottomAnchor="44.0" AnchorPane.leftAnchor="166.0" GridPane.rowIndex="1" />
+      <Button fx:id="playBtn" layoutX="211.0" layoutY="138.0" mnemonicParsing="false" onAction="#handlePlayButton" prefHeight="32.0" prefWidth="21.0" stylesheets="@PlayerTheme.css" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="202.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Button id="forwardBtn" fx:id="forwardBtn" layoutX="282.0" layoutY="177.0" mnemonicParsing="false" stylesheets="@PlayerTheme.css" AnchorPane.bottomAnchor="44.0" AnchorPane.leftAnchor="248.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <Label fx:id="currentTimeLabel" layoutX="66.0" layoutY="201.0" text="00:00" textFill="#d0c7c7" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="50.0">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Button id="loadBtn" fx:id="loadBtn" alignment="CENTER" layoutX="21.0" layoutY="184.0" minHeight="30.0" minWidth="25.0" mnemonicParsing="false" onAction="#loadMedia" opacity="0.75" prefHeight="25.0" prefWidth="15.0" stylesheets="@PlayerTheme.css" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="10.0" />
+      <Slider fx:id="volumeSlider" layoutX="337.0" layoutY="153.0" prefHeight="25.0" prefWidth="86.0" AnchorPane.bottomAnchor="48.0" AnchorPane.leftAnchor="337.0" />
+      <Label fx:id="totalTimeLabel" layoutX="389.0" layoutY="173.0" text="88:88" textFill="#d0c7c7" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="373.0">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imageView" fitHeight="112.0" fitWidth="127.0" layoutX="53.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="40.0" />
+      <GridPane layoutX="180.0" layoutY="37.0" prefHeight="81.0" prefWidth="265.0" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="37.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="127.0" minWidth="10.0" prefWidth="60.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="210.0" minWidth="10.0" prefWidth="200.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Album:" textFill="#e7e4e4" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Lucida Sans Demibold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="songLabel" textFill="WHITE" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Lucida Sans Demibold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="artistLabel" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="albumLabel" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Lucida Sans Demibold" size="13.0" />
+               </font>
+            </Label>
+            <Label text=" Artist:" textFill="#e7e4e4" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Lucida Sans Demibold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="58.0" text="  Title:" textFill="#e7e4e4">
+               <font>
+                  <Font name="Lucida Sans Demibold" size="13.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </GridPane>
+      <ImageView fx:id="speakerView" fitHeight="25.0" fitWidth="22.0" layoutX="340.0" layoutY="149.0" opacity="0.85" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="315.0" />
+      <ToolBar fx:id="toolBar" nodeOrientation="RIGHT_TO_LEFT" prefHeight="29.0" prefWidth="515.0" stylesheets="@MiniPlayerTheme.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <Button id="closebutton" fx:id="closeButton" mnemonicParsing="false" prefHeight="15.0" prefWidth="23.0" stylesheets="@PlayerTheme.css" />
+            <Button id="minimizebutton" fx:id="minimizeButton" contentDisplay="BOTTOM" mnemonicParsing="false" prefHeight="15.0" prefWidth="23.0" stylesheets="@PlayerTheme.css">
+               <opaqueInsets>
+                  <Insets top="1.0" />
+               </opaqueInsets>
+            </Button>
+            <HBox prefHeight="20.0" prefWidth="254.0" />
+            <Label alignment="TOP_RIGHT" prefHeight="20.0" prefWidth="97.0" text="Mp3 Player" textFill="#f2f2f2">
+               <font>
+                  <Font name="Lucida Sans Demibold" size="14.0" />
+               </font>
+            </Label>
+         </items>
+      </ToolBar>
+      <ProgressBar fx:id="bar" layoutX="98.0" layoutY="223.0" maxHeight="15.0" minHeight="15.0" prefHeight="15.0" prefWidth="281.0" progress="0.0" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="87.0" />
+      <Button id="volumeButton" fx:id="muteButton" layoutX="310.0" layoutY="149.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" stylesheets="@PlayerTheme.css" AnchorPane.leftAnchor="312.0" AnchorPane.topAnchor="147.0" />
+   </children>
+</AnchorPane>
