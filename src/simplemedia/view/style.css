@@ -1,19 +1,19 @@
 #outerpane {
     -fx-base: #68767F;
-	-fx-background-radius: 5px;
-	-fx-background-color: 
-		linear-gradient(rgb(104,118,127), #454e54 100%, #5c6870 50%); 
+    -fx-background-radius: 5px;
+    -fx-background-color: 
+        linear-gradient(rgb(104,118,127), #454e54 100%, #5c6870 50%); 
 }
 
 .slider .thumb {
 
-	-fx-background-size: 10px 10px;
-	-fx-background-color: lightgrey;
+    -fx-background-size: 10px 10px;
+    -fx-background-color: lightgrey;
 }
 
 .progress-bar > .bar {
-	-fx-accent: #c0c0c0;
-	-fx-background-radius: 4px;
+    -fx-accent: #c0c0c0;
+    -fx-background-radius: 4px;
 }
 
 .progress-bar > .track {
@@ -22,5 +22,5 @@
 }
 
 .tool-bar {
-	-fx-background-radius: 9px; 
+    -fx-background-radius: 9px; 
 }

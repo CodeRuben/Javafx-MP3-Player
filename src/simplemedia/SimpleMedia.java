@@ -28,26 +28,26 @@ public class SimpleMedia extends Application {
         
         initLayout();
         
-		// Pass a reference of the main class to the controller instance.
+        // Pass a reference of the main class to the controller instance.
         controller.setSimpleMedia(this);
     }
     
-	/**
-	 * Sets the stage, loads the interface and creates a controller instance.
-	 * Creates an undecorated stage.
-	 */
+    /**
+     * Sets the stage, loads the interface and creates a controller instance.
+     * Creates an undecorated stage.
+     */
     public void initLayout() {
         try {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(SimpleMedia.class.getResource("/simplemedia/view/Player.fxml"));
             root = (AnchorPane) loader.load();
 
-	    	controller = loader.getController();
+            controller = loader.getController();
 
             Scene scene = new Scene(root,425,223);
             stage.setScene(scene);
-			stage.getScene().setFill(Color.TRANSPARENT);
-			stage.initStyle(StageStyle.TRANSPARENT);
+            stage.getScene().setFill(Color.TRANSPARENT);
+            stage.initStyle(StageStyle.TRANSPARENT);
             stage.show();
         }
         catch (IOException ex) {
@@ -55,12 +55,12 @@ public class SimpleMedia extends Application {
         }
     }
    
-	/**
-	 * Returns a reference to the stage variable. 
-	 * @return the stage instance variable. 
-	 */
+    /**
+     * Returns a reference to the stage variable. 
+     * @return the stage instance variable. 
+     */
     public Stage getStage() {
-		return this.stage;
+        return this.stage;
     }
     
     public static void main(String args[]) {
