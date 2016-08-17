@@ -22,7 +22,7 @@ import org.jaudiotagger.tag.TagException;
 
 /**
  *
- * @author ruben
+ * @author ruben 
  */
 public final class MediaModel {
 	private final StringProperty album;
@@ -113,7 +113,7 @@ public final class MediaModel {
 			try {
 				// Uses JAudioTagger variables to extract the album artwork
 				MP3File mp3 = new MP3File(path);
-				if(mp3.hasID3v1Tag() && !mp3.getTag().getArtworkList().isEmpty()) {
+				if(!mp3.getTag().getArtworkList().isEmpty()) {
 					BufferedImage img = 
 							 (BufferedImage) mp3.getTag().getFirstArtwork().getImage();
 					// Check if the buffered image is valid

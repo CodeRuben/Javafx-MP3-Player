@@ -25,12 +25,12 @@ import javafx.util.Duration;
 import simplemedia.MediaModel;
 import simplemedia.SimpleMedia;
 
-/**
+/** 
  *
  * @author ruben
  */
 public class PlayerController {
-    
+   	 
     @FXML
     private Button rewindBtn;
 

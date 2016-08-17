@@ -78,7 +78,7 @@
          </opaqueInsets>
       </GridPane>
       <ImageView fx:id="speakerView" fitHeight="25.0" fitWidth="22.0" layoutX="340.0" layoutY="149.0" opacity="0.85" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="315.0" />
-      <ToolBar fx:id="toolBar" nodeOrientation="RIGHT_TO_LEFT" prefHeight="29.0" prefWidth="515.0" stylesheets="@MiniPlayerTheme.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <ToolBar fx:id="toolBar" nodeOrientation="RIGHT_TO_LEFT" prefHeight="29.0" prefWidth="515.0" stylesheets="@style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <items>
             <Button id="closebutton" fx:id="closeButton" mnemonicParsing="false" prefHeight="15.0" prefWidth="23.0" stylesheets="@PlayerTheme.css" />
             <Button id="minimizebutton" fx:id="minimizeButton" contentDisplay="BOTTOM" mnemonicParsing="false" prefHeight="15.0" prefWidth="23.0" stylesheets="@PlayerTheme.css">
