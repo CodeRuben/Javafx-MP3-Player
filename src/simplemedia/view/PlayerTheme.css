@@ -226,7 +226,7 @@
     -fx-background-color: rgba(105,105,105, .9); 
     -fx-background-radius: 9px;
     -fx-background-color: 
-        linear-gradient(rgb(104,118,127), #454e54 100%, #5c6870 50%); 
+	linear-gradient(to bottom, rgba(93,135,175,1) 0%,rgba(54,64,70,1) 100%);
 };
 
 .slider .thumb {

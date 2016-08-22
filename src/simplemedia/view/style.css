@@ -1,8 +1,7 @@
 #outerpane {
     -fx-base: #68767F;
     -fx-background-radius: 5px;
-    -fx-background-color: 
-        linear-gradient(rgb(104,118,127), #454e54 100%, #5c6870 50%); 
+    -fx-background-color: #507395;
 }
 
 .slider .thumb {
