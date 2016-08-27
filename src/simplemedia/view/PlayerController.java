@@ -198,6 +198,12 @@ public class PlayerController {
             }
         });
         
+	volumeSlider.setOnMousePressed(event -> { 
+	    double count = event.getX() / 86;
+	    mediaPlayer.setVolume(count); 
+	    pane.requestFocus();
+	});
+
         volumeSlider.addEventFilter(KeyEvent.KEY_PRESSED, event -> {
             if(event.getCode().equals(KeyCode.LEFT))    
                 event.consume();
